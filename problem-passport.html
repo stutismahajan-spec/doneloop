@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Problem Passport demo — DoneLoop</title>
+    <meta
+      name="description"
+      content="A fictional DoneLoop Problem Passport: summary, document checklist, pending actions, follow-ups, progress, next step, and a closure note. Nothing is saved."
+    />
+    <meta name="theme-color" content="#0c2340" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <img src="assets/logo.svg" width="32" height="32" alt="" />
+          <span>DoneLoop</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="problem-passport.html" aria-current="page">Passport</a>
+          <a href="about.html">About</a>
+          <a class="button button-primary" href="submit-problem.html">Submit a problem</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="kicker">Problem Passport</p>
+          <h1>One record for the whole task.</h1>
+          <p class="lede">
+            A Problem Passport holds the summary, the documents, the pending actions, the follow-ups,
+            the progress, the next step, and a closure note. The case below is fictional. You can
+            change it. Nothing is saved.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <p class="demo-flag">Demonstration · fictional sample · not connected to a backend</p>
+          <div id="passport-app" class="stack">
+            <article class="dash-card">
+              <div class="dash-head">
+                <div>
+                  <p class="ref">DL-2048 · Billing and accounts · Opened 4 March 2026</p>
+                  <h2>Security deposit after the lease ended</h2>
+                </div>
+                <p class="status-pill" data-case-status>Open</p>
+              </div>
+              <p class="deck">
+                The lease ended on 28 February. A security deposit was paid at move-in. The final
+                walkthrough noted ordinary wear. No itemized deduction letter has arrived, and the
+                resident portal only shows “processing.”
+              </p>
+              <div
+                class="progress"
+                data-progress
+                role="progressbar"
+                aria-valuenow="2"
+                aria-valuemin="0"
+                aria-valuemax="6"
+                aria-label="Sample progress"
+              >
+                <span data-progress-bar style="width: 33%"></span>
+              </div>
+              <p class="progress-label" data-progress-text aria-live="polite">2 of 6 items settled</p>
+              <div class="next-step">
+                <span class="chip">Next step</span>
+                <p data-next-step>Ask the office for the itemized deduction letter.</p>
+              </div>
+              <p style="margin-top: 1rem">
+                <button class="button button-ghost" type="button" data-reset>Reset this demo</button>
+              </p>
+            </article>
+
+            <div class="dash-grid two">
+              <article class="dash-card">
+                <h3>Document checklist</h3>
+                <ul class="check-list">
+                  <li class="check-row">
+                    <div>
+                      <p class="row-title">Lease-end confirmation</p>
+                      <p class="row-detail">Email from the property office, 1 March</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="state-toggle is-done"
+                      data-toggle
+                      data-step-order="8"
+                      data-next="Collect the lease-end confirmation and mark it received."
+                      data-label-on="Received"
+                      data-label-off="Outstanding"
+                      aria-pressed="true"
+                    >
+                      Received
+                    </button>
+                  </li>
+                  <li class="check-row">
+                    <div>
+                      <p class="row-title">Move-in condition notes</p>
+                      <p class="row-detail">Photos saved from the first week</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="state-toggle is-done"
+                      data-toggle
+                      data-step-order="9"
+                      data-next="Collect the move-in condition notes and mark them received."
+                      data-label-on="Received"
+                      data-label-off="Outstanding"
+                      aria-pressed="true"
+                    >
+                      Received
+                    </button>
+                  </li>
+                  <li class="check-row">
+                    <div>
+                      <p class="row-title">Final walkthrough notes</p>
+                      <p class="row-detail">Requested. Not provided yet.</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="state-toggle is-open"
+                      data-toggle
+                      data-step-order="2"
+                      data-next="Ask for the final walkthrough notes and mark them received."
+                      data-label-on="Received"
+                      data-label-off="Outstanding"
+                      aria-pressed="false"
+                    >
+                      Outstanding
+                    </button>
+                  </li>
+                  <li class="check-row">
+                    <div>
+                      <p class="row-title">Proof of the deposit payment</p>
+                      <p class="row-detail">Bank record or the original receipt</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="state-toggle is-open"
+                      data-toggle
+                      data-step-order="3"
+                      data-next="Locate proof of the deposit payment and mark it received."
+                      data-label-on="Received"
+                      data-label-off="Outstanding"
+                      aria-pressed="false"
+                    >
+                      Outstanding
+                    </button>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="dash-card">
+                <h3>Pending actions</h3>
+                <ul class="check-list">
+                  <li class="check-row">
+                    <div>
+                      <p class="row-title">Ask the office for the itemized deduction letter</p>
+                      <p class="due">Due 18 April 2026</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="state-toggle is-open"
+                      data-toggle
+                      data-step-order="1"
+                      data-next="Ask the office for the itemized deduction letter."
+                      data-label-on="Done"
+                      data-label-off="Open"
+                      aria-pressed="false"
+                    >
+                      Open
+                    </button>
+                  </li>
+                  <li class="check-row">
+                    <div>
+                      <p class="row-title">Check the portal and log the status</p>
+                      <p class="due">Due 21 April 2026</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="state-toggle is-open"
+                      data-toggle
+                      data-step-order="4"
+                      data-next="Check the portal and log whatever status it shows."
+                      data-label-on="Done"
+                      data-label-off="Open"
+                      aria-pressed="false"
+                    >
+                      Open
+                    </button>
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="dash-grid two">
+              <article class="dash-card">
+                <h3>Follow-up history</h3>
+                <ul class="timeline" data-followups>
+                  <li class="timeline-item">
+                    <p class="timeline-when">2 March 2026 · Email</p>
+                    <p>Asked when the deposit would be returned. Received an automatic reply only.</p>
+                  </li>
+                  <li class="timeline-item">
+                    <p class="timeline-when">9 March 2026 · Phone</p>
+                    <p>Front desk said accounting reviews deposits on Fridays. No case number was given.</p>
+                  </li>
+                  <li class="timeline-item">
+                    <p class="timeline-when">20 March 2026 · Portal</p>
+                    <p>Status still says “processing.” No new document.</p>
+                  </li>
+                </ul>
+                <form class="inline-form" data-followup-form onsubmit="event.preventDefault()">
+                  <div class="field">
+                    <label for="followup-channel">Channel</label>
+                    <select id="followup-channel">
+                      <option>Phone</option>
+                      <option>Email</option>
+                      <option>Portal</option>
+                      <option>Letter</option>
+                      <option>In person</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="followup-note">Note</label>
+                    <textarea id="followup-note" maxlength="500" placeholder="What happened, and what is still waiting?"></textarea>
+                    <p class="field-error" data-followup-error hidden></p>
+                  </div>
+                  <button class="button button-primary" type="submit">Add a demo follow-up</button>
+                </form>
+              </article>
+
+              <article class="dash-card">
+                <h3>Closure record</h3>
+                <p class="deck">
+                  Still open. A closure note is recorded only when you decide the matter is finished
+                  on your side. It does not mean the deposit was returned.
+                </p>
+                <div class="field" style="margin-top: 0.9rem">
+                  <label for="closure-note">Closure note</label>
+                  <textarea id="closure-note" maxlength="500" placeholder="Example: Waiting on the itemized letter. No refund seen yet."></textarea>
+                  <p class="field-error" data-closure-error hidden></p>
+                </div>
+                <p style="margin-top: 0.75rem">
+                  <button class="button button-secondary" type="button" data-save-closure>Record closure note</button>
+                </p>
+                <div data-closure-saved hidden class="first-move">
+                  <p class="index-label">CLOSURE NOTED — DEMONSTRATION ONLY</p>
+                  <p data-closure-text></p>
+                  <p class="hint">This note exists only on this page. It was not sent or stored. A note here does not mean a third party resolved the matter.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/logo.svg" width="32" height="32" alt="" />
+            <span>DoneLoop</span>
+          </a>
+          <p>From “I Need Help” to “It’s Done.”</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="submit-problem.html">Submit a problem</a>
+          <a href="about.html">About</a>
+        </nav>
+        <p class="fine">Sample case DL-2048 is fiction. Changing it does not create a real case file. © 2026 DoneLoop</p>
+      </div>
+    </footer>
+  </body>
+</html>

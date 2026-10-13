@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DoneLoop — From “I Need Help” to “It’s Done.”</title>
+    <meta
+      name="description"
+      content="DoneLoop helps you organize complicated paperwork, unclear requirements, and follow-ups into a clear action plan. From “I Need Help” to “It’s Done.”"
+    />
+    <meta name="theme-color" content="#0c2340" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <img src="assets/logo.svg" width="32" height="32" alt="" />
+          <span>DoneLoop</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="problem-passport.html">Passport</a>
+          <a href="about.html">About</a>
+          <a class="button button-primary" href="submit-problem.html">Submit a problem</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="kicker">From “I Need Help” to “It’s Done.”</p>
+            <h1>Feeling Stuck? Let's Find Your Next Step.</h1>
+            <p class="lede">
+              Complicated tasks can become overwhelming when they involve documents, unclear
+              requirements, multiple calls, and repeated follow-ups. DoneLoop helps you organize the
+              details, create an action plan, and track progress.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="submit-problem.html">Submit a Problem</a>
+              <a class="button button-quiet" href="how-it-works.html">How It Works</a>
+            </div>
+          </div>
+          <article class="card passport-card" aria-label="Sample Problem Passport preview">
+            <p class="demo-flag">Fictional sample · not a customer</p>
+            <p class="ref">DL-2048 · Billing and accounts</p>
+            <h2>Security deposit after the lease ended</h2>
+            <p class="meta-line">Opened 4 March 2026 · Status: Open</p>
+            <div class="next-step">
+              <span class="chip">Next step</span>
+              <p>Ask the office for the itemized deduction letter.</p>
+            </div>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-valuenow="2"
+              aria-valuemin="0"
+              aria-valuemax="6"
+              aria-label="Sample progress"
+            >
+              <span style="width: 33%"></span>
+            </div>
+            <p class="progress-label">2 of 6 items settled</p>
+            <ul class="mini-list">
+              <li><span>Lease-end confirmation</span><span class="tag">Received</span></li>
+              <li><span>Final walkthrough notes</span><span class="tag open">Outstanding</span></li>
+              <li><span>Last follow-up</span><span class="tag">20 March · Portal</span></li>
+            </ul>
+            <p style="margin-top: 1rem">
+              <a href="problem-passport.html">Open the interactive passport</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="container">
+          <div class="section-head">
+            <h2>The problem</h2>
+            <p>
+              A task gets heavy when the path is unclear. You are not short on effort. You are short
+              on a reliable picture of what is required, what you already did, and what should happen
+              next.
+            </p>
+          </div>
+          <div class="grid-2">
+            <article class="card">
+              <h3>Complicated paperwork</h3>
+              <p>Forms, letters, and portals ask for details that are easy to misplace once the thread gets long.</p>
+            </article>
+            <article class="card">
+              <h3>Confusing processes</h3>
+              <p>Requirements change by office, and the instructions rarely say what happens if something is missing.</p>
+            </article>
+            <article class="card">
+              <h3>Missed follow-ups</h3>
+              <p>Calls go unlogged. Deadlines pass because nobody wrote down who said what, or when to check again.</p>
+            </article>
+            <article class="card">
+              <h3>Uncertainty about the next step</h3>
+              <p>You know the outcome you want, but not the single action that actually moves the task forward.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="solution" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head">
+            <h2>Our solution</h2>
+            <p>
+              DoneLoop organizes the problem into clear steps. You describe it once. The details,
+              the missing pieces, and the next action live in one record instead of five scattered threads.
+            </p>
+          </div>
+          <div class="split">
+            <article class="card">
+              <p class="index-label">BEFORE · SAME FICTIONAL CASE</p>
+              <h3>Scattered notes</h3>
+              <ul class="plain-list">
+                <li><img src="assets/icons/limit.svg" alt="" /> Portal still says “processing.”</li>
+                <li><img src="assets/icons/limit.svg" alt="" /> A 9 March call. No case number.</li>
+                <li><img src="assets/icons/limit.svg" alt="" /> Walkthrough notes were requested.</li>
+                <li><img src="assets/icons/limit.svg" alt="" /> The deposit receipt might be in an old email.</li>
+              </ul>
+            </article>
+            <article class="card soft">
+              <p class="index-label">WITH DONELOOP</p>
+              <h3>Clear steps</h3>
+              <ul class="plain-list">
+                <li><img src="assets/icons/check.svg" alt="" /> Problem Passport opened for DL-2048.</li>
+                <li><img src="assets/icons/check.svg" alt="" /> Two documents in hand, two still missing.</li>
+                <li><img src="assets/icons/check.svg" alt="" /> Next step dated: ask for the itemized letter.</li>
+                <li><img src="assets/icons/check.svg" alt="" /> Follow-ups written down, not remembered.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head">
+            <h2>Our features</h2>
+            <p>Six parts of one record. Nothing here is a separate product.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="card icon-card">
+              <img src="assets/icons/organize.svg" alt="" />
+              <h3>Problem Organization</h3>
+              <p>Organize the issue, the people involved, and the details that matter.</p>
+            </article>
+            <article class="card icon-card">
+              <img src="assets/icons/passport.svg" alt="" />
+              <h3>Problem Passport</h3>
+              <p>Keep a structured record so the story does not live in five threads.</p>
+            </article>
+            <article class="card icon-card">
+              <img src="assets/icons/checklist.svg" alt="" />
+              <h3>Document Checklist</h3>
+              <p>Track known requirements and what is still outstanding.</p>
+            </article>
+            <article class="card icon-card">
+              <img src="assets/icons/plan.svg" alt="" />
+              <h3>Action Plan</h3>
+              <p>Organize practical next steps in an order you can follow.</p>
+            </article>
+            <article class="card icon-card">
+              <img src="assets/icons/followup.svg" alt="" />
+              <h3>Follow-Up Tracker</h3>
+              <p>Record calls, updates, deadlines, and pending replies.</p>
+            </article>
+            <article class="card icon-card">
+              <img src="assets/icons/progress.svg" alt="" />
+              <h3>Progress Record</h3>
+              <p>Review completed actions and what is still open.</p>
+            </article>
+          </div>
+          <p style="margin-top: 1.25rem"><a href="services.html">Read how each part is used</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="how" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head">
+            <h2>How it works</h2>
+            <p>Five steps. The full walkthrough is on its own page.</p>
+          </div>
+          <ol class="stack" style="list-style: none; margin: 0; padding: 0">
+            <li class="card step">
+              <span class="step-num" aria-hidden="true">1</span>
+              <div>
+                <h3>Tell us about your problem.</h3>
+                <p>Share what is going on, what you have tried, and how to reach you.</p>
+              </div>
+            </li>
+            <li class="card step">
+              <span class="step-num" aria-hidden="true">2</span>
+              <div>
+                <h3>Organize the relevant information.</h3>
+                <p>Separate facts, documents, dates, and open questions.</p>
+              </div>
+            </li>
+            <li class="card step">
+              <span class="step-num" aria-hidden="true">3</span>
+              <div>
+                <h3>Create a Problem Passport.</h3>
+                <p>One record holds the summary, the checklist, and the current status.</p>
+              </div>
+            </li>
+            <li class="card step">
+              <span class="step-num" aria-hidden="true">4</span>
+              <div>
+                <h3>Follow the action plan and track progress.</h3>
+                <p>Work the next steps and log calls, updates, and deadlines.</p>
+              </div>
+            </li>
+            <li class="card step">
+              <span class="step-num" aria-hidden="true">5</span>
+              <div>
+                <h3>Review the outcome and record the final status.</h3>
+                <p>Keep what was completed and what, if anything, remains.</p>
+              </div>
+            </li>
+          </ol>
+          <p style="margin-top: 1.25rem"><a href="how-it-works.html">See the process in detail</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="who" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head">
+            <h2>Who it’s for</h2>
+            <p>People who can describe the situation, and need the work put in order.</p>
+          </div>
+          <div class="grid-2">
+            <article class="card">
+              <h3>Busy professionals</h3>
+              <p>You cannot afford another unstructured thread sitting next to the rest of your week.</p>
+            </article>
+            <article class="card">
+              <h3>Several applications at once</h3>
+              <p>Renewals, forms, and portals that each want something slightly different.</p>
+            </article>
+            <article class="card">
+              <h3>People dealing with paperwork</h3>
+              <p>A stack of documents with instructions that never quite say what “done” looks like.</p>
+            </article>
+            <article class="card">
+              <h3>Complicated service requests</h3>
+              <p>Customers who need help keeping calls, case numbers, and missing items in one place.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="limit">
+            <h2>A clear limit</h2>
+            <p>
+              DoneLoop helps you organize tasks and coordinate next steps. It does not guarantee
+              approvals, refunds, or resolutions controlled by third parties.
+            </p>
+            <p style="margin-top: 0.9rem"><a href="about.html">What we do and what we don’t</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="container">
+          <h2>Your Next Step Doesn't Have to Be Complicated.</h2>
+          <p class="lede">
+            Share what is stuck. This site can show you how a submission would be framed. The form
+            is a demonstration — it does not send or store what you type.
+          </p>
+          <div class="button-row">
+            <a class="button button-primary" href="submit-problem.html">Submit Your Problem</a>
+            <a class="button button-quiet" href="problem-passport.html">View a passport</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/logo.svg" width="32" height="32" alt="" />
+            <span>DoneLoop</span>
+          </a>
+          <p>From “I Need Help” to “It’s Done.”</p>
+          <p>DoneLoop helps turn complicated tasks into clear next steps.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="problem-passport.html">Passport</a>
+          <a href="submit-problem.html">Submit a problem</a>
+          <a href="about.html">About</a>
+        </nav>
+        <p class="fine">
+          DoneLoop organizes tasks and coordinates next steps. It does not guarantee approvals,
+          refunds, or resolutions that a third party controls. © 2026 DoneLoop
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submit a problem — DoneLoop demonstration</title>
+    <meta
+      name="description"
+      content="Demonstration form for DoneLoop. Describe a complicated task and see how it would be framed. Nothing you enter is stored or sent."
+    />
+    <meta name="theme-color" content="#0c2340" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="skip" href="#main">Skip to content</a>
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <img src="assets/logo.svg" width="32" height="32" alt="" />
+          <span>DoneLoop</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="problem-passport.html">Passport</a>
+          <a href="about.html">About</a>
+          <a class="button button-primary" href="submit-problem.html" aria-current="page">Submit a problem</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="kicker">Submit a problem</p>
+          <h1>Your Next Step Doesn't Have to Be Complicated.</h1>
+          <p class="lede">
+            Tell us enough to see the shape of the task. This page only previews how a DoneLoop
+            intake would read. It does not file anything, and it does not contact anyone.
+          </p>
+        </div>
+      </section>
+      <section class="section" id="submit">
+        <div class="container stack">
+          <article class="card notice" id="privacy">
+            <h2>Privacy notice</h2>
+            <p class="deck">
+              This form is a demonstration. It is not connected to an inbox or a database. Your name,
+              contact details, and description stay in this browser only long enough to show a
+              confirmation on this page. They are not transmitted, not saved on a server, and not
+              shared. Refreshing or leaving the page clears them.
+            </p>
+            <p class="deck">
+              Please do not include government identification numbers, full financial account
+              numbers, medical information, or passwords. If a live intake is offered later, DoneLoop
+              will explain what would be collected and ask again before anything is stored.
+            </p>
+          </article>
+
+          <noscript>
+            <p class="noscript">
+              JavaScript is off, so the confirmation preview cannot run. The form still does not send
+              your information. Turn JavaScript on to try the demonstration, or read the
+              <a href="about.html#privacy">privacy notice</a>.
+            </p>
+          </noscript>
+
+          <form id="problem-form" class="form-card" novalidate onsubmit="event.preventDefault()">
+            <p class="demo-flag">Demonstration form — nothing you enter is stored or sent</p>
+            <p class="form-alert" data-form-summary hidden></p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name <span class="req">(required)</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required />
+                <p class="field-error" id="name-error" data-error-for="name" hidden></p>
+              </div>
+              <div class="field">
+                <label for="contact">Email or preferred contact <span class="req">(required)</span></label>
+                <p class="hint" id="contact-hint">An email, a phone number, or another real way to reach you.</p>
+                <input id="contact" name="contact" type="text" autocomplete="on" maxlength="200" required aria-describedby="contact-hint" />
+                <p class="field-error" id="contact-error" data-error-for="contact" hidden></p>
+              </div>
+              <div class="field">
+                <label for="category">Problem category <span class="req">(required)</span></label>
+                <select id="category" name="category" required>
+                  <option value="">Choose a category</option>
+                  <option>Paperwork and documents</option>
+                  <option>Applications and permits</option>
+                  <option>Billing and accounts</option>
+                  <option>Service requests</option>
+                  <option>Appointments and scheduling</option>
+                  <option>Benefits or claims</option>
+                  <option>Something else</option>
+                </select>
+                <p class="field-error" id="category-error" data-error-for="category" hidden></p>
+              </div>
+              <div class="field">
+                <label for="description">Description of the problem <span class="req">(required)</span></label>
+                <p class="hint" id="description-hint">What happened, what you need, and where it is stuck.</p>
+                <textarea id="description" name="description" maxlength="2000" required aria-describedby="description-hint"></textarea>
+                <p class="field-error" id="description-error" data-error-for="description" hidden></p>
+              </div>
+              <div class="field">
+                <label for="actionsTaken">Actions already taken <span class="req">(optional)</span></label>
+                <textarea id="actionsTaken" name="actionsTaken" maxlength="2000"></textarea>
+              </div>
+              <div class="field">
+                <label for="documentsKnown">Known document requirements <span class="req">(optional)</span></label>
+                <textarea id="documentsKnown" name="documentsKnown" maxlength="2000"></textarea>
+              </div>
+              <div class="field">
+                <label for="currentStatus">Current status <span class="req">(optional)</span></label>
+                <select id="currentStatus" name="currentStatus">
+                  <option value="">Not specified</option>
+                  <option>Not started</option>
+                  <option>Gathering documents</option>
+                  <option>Waiting on someone else</option>
+                  <option>In progress</option>
+                  <option>Blocked</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="assistance">Type of assistance required <span class="req">(required)</span></label>
+                <select id="assistance" name="assistance" required>
+                  <option value="">Choose the kind of help</option>
+                  <option value="organize">Organize the problem and the relevant details</option>
+                  <option value="checklist">Build a document checklist</option>
+                  <option value="plan">Create an action plan</option>
+                  <option value="followups">Track calls, deadlines, and follow-ups</option>
+                  <option value="progress">Review progress and what is still open</option>
+                </select>
+                <p class="field-error" id="assistance-error" data-error-for="assistance" hidden></p>
+              </div>
+              <div class="field">
+                <div class="consent">
+                  <input id="consent" name="consent" type="checkbox" required />
+                  <label for="consent">
+                    I have read the privacy notice and I understand this demonstration does not store
+                    or send my information. <span class="req">(required)</span>
+                  </label>
+                </div>
+                <p class="field-error" id="consent-error" data-error-for="consent" hidden></p>
+              </div>
+            </div>
+            <p style="margin-top: 1rem">
+              <button class="button button-primary" type="submit">Submit Your Problem</button>
+            </p>
+          </form>
+
+          <section id="confirmation" class="form-card" hidden tabindex="-1">
+            <p class="demo-flag">Demonstration only</p>
+            <h2 id="confirmation-title" tabindex="-1">Nothing was stored or sent.</h2>
+            <p class="deck">
+              Your answers stayed in this browser so you could see how a submission would be framed.
+              Close or refresh the page and they are gone. This is not a confirmation from DoneLoop staff.
+            </p>
+            <dl class="confirm-list">
+              <div>
+                <dt>Name</dt>
+                <dd id="confirm-name"></dd>
+              </div>
+              <div>
+                <dt>Contact</dt>
+                <dd id="confirm-contact"></dd>
+              </div>
+              <div>
+                <dt>Category</dt>
+                <dd id="confirm-category"></dd>
+              </div>
+              <div>
+                <dt>In their words</dt>
+                <dd id="confirm-description"></dd>
+              </div>
+              <div>
+                <dt>Already tried</dt>
+                <dd id="confirm-actions"></dd>
+              </div>
+              <div>
+                <dt>Known documents</dt>
+                <dd id="confirm-documents"></dd>
+              </div>
+              <div>
+                <dt>Current status</dt>
+                <dd id="confirm-status"></dd>
+              </div>
+              <div>
+                <dt>Assistance requested</dt>
+                <dd id="confirm-assistance"></dd>
+              </div>
+            </dl>
+            <div class="first-move">
+              <p class="index-label">A POSSIBLE FIRST STEP</p>
+              <p id="confirm-move"></p>
+              <p class="hint">
+                Suggested on this page from the assistance you picked. Not a decision from DoneLoop,
+                and not saved.
+              </p>
+            </div>
+            <p style="margin-top: 1rem">
+              <button class="button button-secondary" type="button" data-form-reset>Start another demonstration</button>
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/logo.svg" width="32" height="32" alt="" />
+            <span>DoneLoop</span>
+          </a>
+          <p>From “I Need Help” to “It’s Done.”</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="problem-passport.html">Passport</a>
+          <a href="about.html">About</a>
+        </nav>
+        <p class="fine">Demonstration intake only. DoneLoop does not guarantee third-party outcomes. © 2026 DoneLoop</p>
+      </div>
+    </footer>
+  </body>
+</html>
